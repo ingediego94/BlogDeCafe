@@ -11,4 +11,183 @@
     --negro: #000000fc;
 }
 
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuenteHeading);
+}
+
+*, *:before, *::after {
+    box-sizing: inherit;
+}
+
+header {
+    font-weight: normal;
+    color: var(--blanco);
+    height: 38rem;
+    background-image: url(../assets/banner-image.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 2rem;
+}
+
+.first_head_line {
+    max-width: 120rem;
+    
+    margin: 0 auto;
+}
+
+.initial_logo {
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+.items_nav {
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+
+
+
+.name_logo {
+    display: block;
+    font-size: 3.3rem;
+    font-weight: normal;
+}
+
+.logo_bold {
+    font-weight: 600;
+}
+
+.second_head_line {
+
+    text-align: center;
+    padding-top: 10%;
+}
+
+.second_head_line h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.second_head_line p {
+    font-size: 1.4rem;
+}
+
+
+/*MAIN BODY OF THE SITE*/
+
+.main_container {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 2rem;
+    width: 90%;
+}
+
+.left {
+    grid-column: 1 /2;
+}
+
+.left img{
+    width: 55vw;
+    margin-block: 1rem;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-block: 1rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-block: 1rem;
+}
+
+p {
+    width: 55vw;
+    line-height: 2rem;
+}
+
+
+.left_buttom {
+    display: inline-block;
+    margin-block: 2rem;
+    padding: 1.5rem;
+    border: 1px solid var(--negro);
+    color: var(--blanco);
+    background-color: var(--negro);
+    font-size: 1.2rem;
+
+}
+
+
+
+
+
+
+.right {
+    grid-column: 2 / 3;
+    
+}
+
+.right article p {
+    width: 10vw;
+}
+
+.right_buttom {
+    display: inline-block;
+    margin-block: 2rem;
+    padding: 1.5rem;
+    border: 1px solid var(--primario);
+    color: var(--blanco);
+    background-color: var(--primario);
+    font-size: 1.2rem;
+
+}
+
+
+
+
+
+/*FOOTER OF THE PAGE*/
+
+.footer_page {
+    background-color: var(--negro);
+    font-family: var(--fuenteHeading);
+    padding: 3vh;
+}
+
+
+@media (min-width: 768px){
+    .first_head_line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navegation{
+        display: flex;
+        gap: 1rem;
+    }
+
+    .footer_page {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
