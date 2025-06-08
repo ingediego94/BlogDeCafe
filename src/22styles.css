@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+:root {
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+    --primario: #784D3C;
+    --claro: #e1e1e1e1;
+    --blanco: #ffffffff;
+    --negro: #000000fc;
+}
+
+h1, h2, h3, h4 {
+    font-family:var(--fuenteHeading);
+}
+
+p, a{
+    font-family: var(--fuenteParrafos);
+}
+
+
+/* body {
+    background-color: pink;
+} */
+
+/*--------------------------------------------*/
+/*HEADER*/
+
+header{
+    background-image: url(../assets/banner-image.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 76vh;
+    padding-bottom: 4rem;
+}
+
+.bar{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 4rem; 
+    padding-inline: 4rem;
+    color: var(--blanco);
+}
+
+.nombre{
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.nombre:hover{
+    transform: scale(1.1);
+    text-shadow: 3px 1px 5px var(--primario);
+}
+
+.negrita {
+    font-weight: 600;
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.items_navegacion {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--blanco);
+}
+
+.items_navegacion:hover{
+    transform: scale(1.1);
+    text-shadow: 3px 1px 5px var(--primario);
+}
+
+.descripcion {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.descripcion h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.descripcion p {
+    font-size: 1.1rem;
+}
+
+/*--------------------------------------------*/
+
+/*MAIN*/
+
+.main_contenedor{
+    display: flex;
+    
+    justify-content: center;
+}
+
+.contenedor{
+    /* border: 1px solid red; */
+    width: 66vw;
+
+}
+
+.titulo_articulos{
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.articulo{
+    display: grid;
+    grid-template-columns: 2, 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid var(--claro);
+}
+
+.izq_articulo{
+    grid-column: 1 /2;
+    width: 22vw;
+    padding-bottom: 2rem;
+}
+
+
+.der_articulo{
+    grid-column: 2 /3;
+}
+
+.titulo_sub_articulo{
+    font-size: 1.8rem;
+}
+
+.parrafo{
+    font-size: 1.3rem;
+    padding-block: 1rem;
+}
+
+.negrita{
+    font-weight: bold;
+    
+}
+
+/*--------------------------------------------*/
+/*FOOTER*/
+footer {
+    background-color: var(--negro);
+    width: 100vw;
+    height: 20vh;
+    padding-bottom: 3rem;
+    margin-top: 8rem;
+}
+
+
+
+
+/*--------------------------------------------*/
+/*RESPONSIVE*/
+
+@media (max-width:768px){
+    .bar{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nombre{
+        
+        text-align: center;
+    }
+
+    .navegacion{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .articulo{
+        grid-template-columns: 1;
+    }
+
+    .izq_articulo{
+        grid-column: 1;
+    }
+
+    .der_articulo{
+        grid-column: 1;
+    }
+
+    footer{
+        height: 40vh;
+    }
+}
+
+
+@media (max-width: 375px){
+    .bar{
+        display: flex;
+        flex-direction: column;
+    }
+    .nombre{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .navegacion{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .descripcion h2 {
+        font-size: 1.8rem;
+    }
+    .articulo{
+        grid-template-columns: 1;
+    }
+
+    .izq_articulo{
+        grid-column: 1;
+    }
+
+    .der_articulo{
+        grid-column: 1;
+    }
+    footer{
+        height: 40vh;
+    }
+}
